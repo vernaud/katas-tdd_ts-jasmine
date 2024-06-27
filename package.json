@@ -4,6 +4,7 @@
   "description": "Kata FizzBuzz, framework jasmine.",
   "main": "index.js",
   "scripts": {
+    "start": "tsc && node dist/index.js",
     "test": "tsc && jasmine"
   },
   "author": "vernaud",
