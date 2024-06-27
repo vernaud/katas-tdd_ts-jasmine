@@ -27,4 +27,15 @@ describe('FizzBuzzCalculator', () => {
         // Assert
         expect(result).toBe(expected);
     });
+
+    it('should return "Fizz" when input is 3 multiple.', () => {
+        // Arrange
+        const expected: string = "Fizz";
+
+        // Act
+        const result = FizzBuzz.calculate(3);
+
+        // Assert
+        expect(result).toBe(expected);
+    });
 });
