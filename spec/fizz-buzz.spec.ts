@@ -43,5 +43,12 @@ describe('FizzBuzzCalculator', () => {
         // Assert
         expect(result).toBe(FizzBuzz.BUZZ);
     });
-    
+
+    it('should return "FizzBuzz" when input is 3 and 5 multiple.', () => {
+        // Act
+        const result = FizzBuzz.calculate(15);
+
+        // Assert
+        expect(result).toBe(FizzBuzz.FIZZ + FizzBuzz.BUZZ);
+    });
 });
