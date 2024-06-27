@@ -15,3 +15,16 @@ describe('printFizzBuzzResult()', () => {
         expect(console.log).toHaveBeenCalledWith(expected);
     })
 });
+
+describe('FizzBuzzCalculator', () => {
+    it('should return "1" when input is 1.', () => {
+        // Arrange
+        const expected: string = "1";
+
+        // Act
+        const result = FizzBuzz.calculate(1);
+
+        // Assert
+        expect(result).toBe(expected);
+    });
+});
