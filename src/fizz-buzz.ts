@@ -1,6 +1,6 @@
 export class FizzBuzz {
     static calculate(arg0: number): string {
-        return "";
+        return arg0.toString();
     }
 
     static printFizzBuzzResult(arg0: number): void {
