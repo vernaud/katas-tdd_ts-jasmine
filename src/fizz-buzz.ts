@@ -10,16 +10,16 @@ export class FizzBuzz {
      */
     static calculate(num: number): string {
 
-        if (num % 3 === 0 && num % 5 === 0) {
-            return FizzBuzz.FIZZ + FizzBuzz.BUZZ;
+        let result = '';
+
+        if (num % 3 === 0) {
+            result += FizzBuzz.FIZZ;
         }
         if (num % 5 === 0) {
-            return FizzBuzz.BUZZ;
+            result += FizzBuzz.BUZZ;
         }
-        if (num % 3 === 0) {
-            return FizzBuzz.FIZZ;
-        }
-        return num.toString();
+
+        return result || num.toString();
     }
 
     /**
@@ -32,3 +32,4 @@ export class FizzBuzz {
     }
     
 }
+
