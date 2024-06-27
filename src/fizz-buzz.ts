@@ -27,8 +27,7 @@ export class FizzBuzz {
      * @param num : number - The number for FizzBuzz calculation.
      */
     static printFizzBuzzResult(num: number): void {
-        const result = num.toString();
-        console.log(result);
+        console.log(this.calculate(num));
     }
     
 }
