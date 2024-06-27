@@ -10,6 +10,9 @@ export class FizzBuzz {
      */
     static calculate(num: number): string {
 
+        if (num % 3 === 0 && num % 5 === 0) {
+            return FizzBuzz.FIZZ + FizzBuzz.BUZZ;
+        }
         if (num % 5 === 0) {
             return FizzBuzz.BUZZ;
         }
