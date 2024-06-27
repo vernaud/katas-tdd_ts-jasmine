@@ -6,6 +6,9 @@ export class FizzBuzz {
      * @returns : string - 'Fizz', 'Buzz', 'FizzBuzz' or the param into string.
      */
     static calculate(num: number): string {
+        if (num % 5 === 0) {
+            return "Buzz";
+        }
         if (num % 3 === 0) {
             return "Fizz";
         }
