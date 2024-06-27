@@ -38,4 +38,15 @@ describe('FizzBuzzCalculator', () => {
         // Assert
         expect(result).toBe(expected);
     });
+
+    it('should return "Buzz" when input is 5 multiple.', () => {
+        // Arrange
+        const expected: string = "Buzz";
+
+        // Act
+        const result = FizzBuzz.calculate(5);
+
+        // Assert
+        expect(result).toBe(expected);
+    });
 });
