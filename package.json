@@ -1,0 +1,16 @@
+{
+  "name": "fizz-buzz_ts-jasmine",
+  "version": "1.0.0",
+  "description": "Kata FizzBuzz, framework jasmine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && jasmine"
+  },
+  "author": "vernaud",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^5.1.4",
+    "jasmine": "^5.1.0",
+    "typescript": "^5.5.2"
+  }
+}
