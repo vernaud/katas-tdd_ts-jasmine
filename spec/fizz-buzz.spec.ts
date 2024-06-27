@@ -14,6 +14,17 @@ describe('printFizzBuzzResult()', () => {
         // Assert
         expect(console.log).toHaveBeenCalledWith(expected);
     })
+
+    it('should call calculate method.', () => {
+        // Arrange
+        spyOn(FizzBuzz, 'calculate');
+
+        // Act
+        FizzBuzz.printFizzBuzzResult(1);
+
+        // Assert
+        expect(FizzBuzz.calculate).toHaveBeenCalled();
+    });
 });
 
 describe('FizzBuzzCalculator', () => {
