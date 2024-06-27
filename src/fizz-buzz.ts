@@ -1,5 +1,8 @@
 export class FizzBuzz {
     static calculate(arg0: number): string {
+        if (arg0 % 3 === 0) {
+            return "Fizz";
+        }
         return arg0.toString();
     }
 
