@@ -1,13 +1,23 @@
 export class FizzBuzz {
-    static calculate(arg0: number): string {
-        if (arg0 % 3 === 0) {
+
+    /**
+     * Calculation of FizzBuzz.
+     * @param num: number - The number to calculate.
+     * @returns : string - 'Fizz', 'Buzz', 'FizzBuzz' or the param into string.
+     */
+    static calculate(num: number): string {
+        if (num % 3 === 0) {
             return "Fizz";
         }
-        return arg0.toString();
+        return num.toString();
     }
 
-    static printFizzBuzzResult(arg0: number): void {
-        const result = arg0.toString();
+    /**
+     * Print the result of FizzBuzz calculation.
+     * @param num : number - The number for FizzBuzz calculation.
+     */
+    static printFizzBuzzResult(num: number): void {
+        const result = num.toString();
         console.log(result);
     }
     
