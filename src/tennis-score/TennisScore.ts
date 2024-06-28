@@ -28,6 +28,15 @@ export class TennisScore {
   }
 
   winPoint(player: number) {
-    throw new Error("Method not implemented.");
+    switch (player) {
+        case 1:
+            this.wonPointsPlayer1++;
+            break;
+        case 2:
+            this.wonPointsPlayer2++;
+            break;
+        default:
+            break;
+    }
   }
 }
