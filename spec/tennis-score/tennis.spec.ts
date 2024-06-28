@@ -45,4 +45,12 @@ describe('convertPointsToScore',() => {
         expect(score).toBe(40);
     });
 
+    it('should return error when points is not in [0,1,2,3]', () => {
+        // Assert
+        expect(() => {
+            ScoreDisplay.convertPointsToScore(4);
+        }).toThrowError("Invalid number of points");
+
+    });
+
 });
