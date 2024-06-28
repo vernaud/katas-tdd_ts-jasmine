@@ -22,14 +22,15 @@ export class ScoreDisplay {
     }
 
     static displayScoreToLog(): void{
+        TennisScore.getScore();
         console.log("Player1 - 0 | 0 - Player2");
     }
     
 }
 
 export class TennisScore {
-    static getScore(getScore: any) {
-        throw new Error("Method not implemented.");
+    static getScore():void {
+        
     }
     
 }
