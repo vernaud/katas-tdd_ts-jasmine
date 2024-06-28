@@ -1,4 +1,4 @@
-import {FizzBuzz} from "../src/fizz-buzz";
+import {FizzBuzz} from "../../src/fizz-buzz/fizz-buzz";
 
 
 describe('printFizzBuzzResult()', () => {
