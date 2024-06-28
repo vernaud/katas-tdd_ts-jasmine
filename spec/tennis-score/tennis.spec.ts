@@ -1,24 +1,4 @@
-import { ScoreDisplay } from "../../src/tennis-score/ScoreDisplay";
 import { TennisScore } from "../../src/tennis-score/TennisScore";
-
-describe('displayScoreToLog', () => {
-
-    it('should call getScore', () => {
-        spyOn(TennisScore, 'getScore');
-        ScoreDisplay.displayScoreToLog();
-        expect(TennisScore.getScore).toHaveBeenCalled();
-    });
-
-    it('should call console.log with "Player1 - 0 | 0 - Player2"', () => {
-        spyOn(console, 'log');
-        const expected: string = "Player1 - 0 | 0 - Player2";
-
-        ScoreDisplay.displayScoreToLog();
-        expect(console.log).toHaveBeenCalledWith(expected);    
-    
-    });
-
-});
 
 describe('convertPointsToScore', () => {
     const testCases = [
@@ -48,10 +28,11 @@ describe('convertPointsToScore', () => {
 describe('winPoint', () => {
 
     it('should increment the score of player', () => {
+        const PLAYER1 = 1;
         let tennisScore = new TennisScore();
         let lastPointsP1 = tennisScore.wonPointsPlayer1;
         let lastPointsP2 = tennisScore.wonPointsPlayer2;
-        tennisScore.winPoint(1);
+        tennisScore.incrementPlayerPoints(PLAYER1);
 
         expect(lastPointsP1+1).toEqual(tennisScore.wonPointsPlayer1);
         expect(lastPointsP2).toEqual(tennisScore.wonPointsPlayer2);

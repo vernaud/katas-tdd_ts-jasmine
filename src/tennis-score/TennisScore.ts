@@ -1,9 +1,17 @@
 export class TennisScore {
-  wonPointsPlayer1: number = 0;
-  wonPointsPlayer2: number = 0;
+  private _wonPointsPlayer1: number = 0;
+  private _wonPointsPlayer2: number = 0;
 
   static getScore() {
     return this;
+  }
+
+  public get wonPointsPlayer1(): number {
+    return this._wonPointsPlayer1;
+  }
+
+  public get wonPointsPlayer2(): number {
+    return this._wonPointsPlayer2;
   }
 
   /**
@@ -27,16 +35,20 @@ export class TennisScore {
     }
   }
 
-  winPoint(player: number) {
+  /**
+   * Increment the score of player1 or player2
+   * @param player : number - Id of the player (1 or 2)
+   */
+  incrementPlayerPoints(player: number): void {
     switch (player) {
-        case 1:
-            this.wonPointsPlayer1++;
-            break;
-        case 2:
-            this.wonPointsPlayer2++;
-            break;
-        default:
-            break;
+      case 1:
+        this._wonPointsPlayer1++;
+        break;
+      case 2:
+        this._wonPointsPlayer2++;
+        break;
+      default:
+        break;
     }
   }
 }
