@@ -4,22 +4,20 @@ export class ScoreDisplay {
      * Convert the number of exchanges won to the tennis score
      * @param nb : number - Number of exchanges won
      * @returns : number - Score in tennis
+     * @throws : Error - If the number of points is not in [0,1,2,3]
      */
     static convertPointsToScore(nb: number): number {
-        if (nb === 0) {
-            return 0;
-        }
-        if (nb === 1) {
-            return 15;
-        }
-        if (nb === 2) {
-            return 30;
-        }
-        if (nb === 3) {
-            return 40;
-        }
-        else {
-            throw new Error("Invalid number of points");
+        switch (nb) {
+            case 0:
+                return 0;
+            case 1:
+                return 15;
+            case 2:
+                return 30;
+            case 3:
+                return 40;
+            default:
+                throw new Error("Invalid number of points");
         }
     }
 

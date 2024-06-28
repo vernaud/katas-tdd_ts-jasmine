@@ -3,54 +3,37 @@ import { ScoreDisplay } from "../../src/tennis-score/tennis";
 describe('displayScoreToLog', () => {
 
     it('should call console.log with "Player1 - 0 | 0 - Player2"', () => {
-        // Arrange
         spyOn(console, 'log');
         const expected: string = "Player1 - 0 | 0 - Player2";
-        // Act
+
         ScoreDisplay.displayScoreToLog();
-        // Assert
         expect(console.log).toHaveBeenCalledWith(expected);    
     
     });
 
 });
 
-describe('convertPointsToScore',() => {
-   
-    it('should return 0 when points is 0', () => {
-        // Act
-        const score = ScoreDisplay.convertPointsToScore(0);
-        // Assert
-        expect(score).toBe(0);
+describe('convertPointsToScore', () => {
+    const testCases = [
+        { points: 0, expected: 0 },
+        { points: 1, expected: 15 },
+        { points: 2, expected: 30 },
+        { points: 3, expected: 40 },
+    ];
+
+    /**
+     * Test ALL points for the convertPointsToScore method
+     */
+    testCases.forEach(({ points, expected }) => {
+        it(`should return ${expected} when points is ${points}`, () => {
+            const score = ScoreDisplay.convertPointsToScore(points);
+            expect(score).toBe(expected);
+        });
     });
 
-    it('should return 15 when points is 1', () => {
-        // Act
-        const score = ScoreDisplay.convertPointsToScore(1);
-        // Assert
-        expect(score).toBe(15);
-    });
-
-    it('should return 30 when points is 2', () => {
-        // Act
-        const score = ScoreDisplay.convertPointsToScore(2);
-        // Assert
-        expect(score).toBe(30);
-    });
-
-    it('should return 40 when points is 3', () => {
-        // Act
-        const score = ScoreDisplay.convertPointsToScore(3);
-        // Assert
-        expect(score).toBe(40);
-    });
-
-    it('should return error when points is not in [0,1,2,3]', () => {
-        // Assert
+    it('should throw an error when points is not in [0,1,2,3]', () => {
         expect(() => {
             ScoreDisplay.convertPointsToScore(4);
         }).toThrowError("Invalid number of points");
-
     });
-
 });
