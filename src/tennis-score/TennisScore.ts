@@ -48,7 +48,7 @@ export class TennisScore {
         this._wonPointsPlayer2++;
         break;
       default:
-        break;
+        throw new Error("Invalid player");
     }
   }
 }
