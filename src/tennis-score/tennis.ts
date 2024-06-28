@@ -18,9 +18,11 @@ export class ScoreDisplay {
         if (nb === 3) {
             return 40;
         }
-        return nb;
+        else {
+            throw new Error("Invalid number of points");
+        }
     }
-    
+
     static displayScoreToLog(): void{
         console.log("Player1 - 0 | 0 - Player2");
     }
