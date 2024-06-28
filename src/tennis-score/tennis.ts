@@ -1,19 +1,26 @@
 export class ScoreDisplay {
-    static convertPointsToScore(arg0: number): number {
-        if (arg0 === 0) {
+
+    /**
+     * Convert the number of exchanges won to the tennis score
+     * @param nb : number - Number of exchanges won
+     * @returns : number - Score in tennis
+     */
+    static convertPointsToScore(nb: number): number {
+        if (nb === 0) {
             return 0;
         }
-        if (arg0 === 1) {
+        if (nb === 1) {
             return 15;
         }
-        if (arg0 === 2) {
+        if (nb === 2) {
             return 30;
         }
-        if (arg0 === 3) {
+        if (nb === 3) {
             return 40;
         }
-        return arg0;
+        return nb;
     }
+    
     static displayScoreToLog(): void{
         console.log("Player1 - 0 | 0 - Player2");
     }
