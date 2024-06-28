@@ -1,6 +1,6 @@
 export class ScoreDisplay {
     static displayScoreToLog(): void{
-        throw new Error("Method not implemented.");
+        console.log("Player1 - 0 | 0 - Player2");
     }
     
 }
