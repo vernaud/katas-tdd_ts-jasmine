@@ -38,4 +38,11 @@ describe('winPoint', () => {
         expect(lastPointsP2).toEqual(tennisScore.wonPointsPlayer2);
     });
 
+    it('should throw an error when player is not in [1,2]', () => {
+        expect(() => {
+            let tennisScore = new TennisScore();
+            tennisScore.incrementPlayerPoints(3);
+        }).toThrowError("Invalid player");
+    });
+
 });
