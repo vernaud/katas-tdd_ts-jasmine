@@ -21,7 +21,7 @@ describe('winPoint', () => {
         let lastPointsP2 = tennisScore.wonPointsPlayer2;
         tennisScore.incrementPlayerPoints(PLAYER1);
 
-        // TODO : Fix the test
+        // FIXME
         // expect(lastPointsP1+1).toEqual(tennisScore.wonPointsPlayer1);
         // expect(lastPointsP2).toEqual(tennisScore.wonPointsPlayer2);
     });
