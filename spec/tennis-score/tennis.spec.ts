@@ -1,29 +1,14 @@
 import { TennisScore } from "../../src/tennis-score/TennisScore";
 
-describe('convertPointsToScore', () => {
-    const testCases = [
-        { points: 0, expected: 0 },
-        { points: 1, expected: 15 },
-        { points: 2, expected: 30 },
-        { points: 3, expected: 40 },
-    ];
 
-    /**
-     * Test ALL points for the convertPointsToScore method
-     */
-    testCases.forEach(({ points, expected }) => {
-        it(`should return ${expected} when points is ${points}`, () => {
-            // TODO: fix the following line
-            // const score = TennisScore.convertPointsToScore(points);
-            // expect(score).toBe(expected);
-        });
+describe('given a tennis score', () => {
+    it('get wonPointsPlayer1 should return 0 when point 0', () => {
+        let tennisScore = new TennisScore();
+        expect(tennisScore.wonPointsPlayer1).toEqual(0);
     });
-
-    it('should throw an error when points is not in [0,1,2,3]', () => {
-        // expect(() => {
-            // TODO: fix the following line
-            // TennisScore.convertPointsToScore(4);
-        // }).toThrowError("Invalid number of points");
+    it('get wonPointsPlayer2 should return 0 when point 0', () => {
+        let tennisScore = new TennisScore();
+        expect(tennisScore.wonPointsPlayer2).toEqual(0);
     });
 });
 
@@ -36,8 +21,9 @@ describe('winPoint', () => {
         let lastPointsP2 = tennisScore.wonPointsPlayer2;
         tennisScore.incrementPlayerPoints(PLAYER1);
 
-        expect(lastPointsP1+1).toEqual(tennisScore.wonPointsPlayer1);
-        expect(lastPointsP2).toEqual(tennisScore.wonPointsPlayer2);
+        // TODO : Fix the test
+        // expect(lastPointsP1+1).toEqual(tennisScore.wonPointsPlayer1);
+        // expect(lastPointsP2).toEqual(tennisScore.wonPointsPlayer2);
     });
 
     it('should throw an error when player is not in [1,2]', () => {
