@@ -44,3 +44,17 @@ describe('convertPointsToScore', () => {
         }).toThrowError("Invalid number of points");
     });
 });
+
+describe('winPoint', () => {
+
+    it('should increment the score of player', () => {
+        let tennisScore = new TennisScore();
+        let lastPointsP1 = tennisScore.wonPointsPlayer1;
+        let lastPointsP2 = tennisScore.wonPointsPlayer2;
+        tennisScore.winPoint(1);
+
+        expect(lastPointsP1+1).toEqual(tennisScore.wonPointsPlayer1);
+        expect(lastPointsP2).toEqual(tennisScore.wonPointsPlayer2);
+    });
+
+});
