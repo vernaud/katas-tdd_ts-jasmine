@@ -14,3 +14,14 @@ describe('displayScoreToLog', () => {
     });
 
 });
+
+describe('convertPointsToScore',() => {
+   
+    it('should return "0" when points is 0', () => {
+        // Act
+        const score = ScoreDisplay.convertPointsToScore(0);
+        // Assert
+        expect(score).toBe(0);
+    });
+
+});
