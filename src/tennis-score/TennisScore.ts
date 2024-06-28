@@ -2,10 +2,6 @@ export class TennisScore {
   private _wonPointsPlayer1: number = 0;
   private _wonPointsPlayer2: number = 0;
 
-  static getScore() {
-    return this;
-  }
-
   public get wonPointsPlayer1(): number {
     return this._wonPointsPlayer1;
   }
