@@ -1,7 +1,13 @@
-import { ScoreDisplay } from "../../src/tennis-score/tennis";
-import {TennisScore} from "../../src/tennis-score/tennis";
+import { ScoreDisplay } from "../../src/tennis-score/ScoreDisplay";
+import { TennisScore } from "../../src/tennis-score/TennisScore";
 
 describe('displayScoreToLog', () => {
+
+    it('should call getScore', () => {
+        spyOn(TennisScore, 'getScore');
+        ScoreDisplay.displayScoreToLog();
+        expect(TennisScore.getScore).toHaveBeenCalled();
+    });
 
     it('should call console.log with "Player1 - 0 | 0 - Player2"', () => {
         spyOn(console, 'log');
@@ -10,12 +16,6 @@ describe('displayScoreToLog', () => {
         ScoreDisplay.displayScoreToLog();
         expect(console.log).toHaveBeenCalledWith(expected);    
     
-    });
-
-    it('should call getScore', () => {
-        spyOn(TennisScore, 'getScore');
-        ScoreDisplay.displayScoreToLog();
-        expect(TennisScore.getScore).toHaveBeenCalled();
     });
 
 });
@@ -33,14 +33,14 @@ describe('convertPointsToScore', () => {
      */
     testCases.forEach(({ points, expected }) => {
         it(`should return ${expected} when points is ${points}`, () => {
-            const score = ScoreDisplay.convertPointsToScore(points);
+            const score = TennisScore.convertPointsToScore(points);
             expect(score).toBe(expected);
         });
     });
 
     it('should throw an error when points is not in [0,1,2,3]', () => {
         expect(() => {
-            ScoreDisplay.convertPointsToScore(4);
+            TennisScore.convertPointsToScore(4);
         }).toThrowError("Invalid number of points");
     });
 });

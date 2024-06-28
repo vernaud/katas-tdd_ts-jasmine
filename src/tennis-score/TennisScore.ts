@@ -1,4 +1,14 @@
-export class ScoreDisplay {
+export class TennisScore {
+
+    scorePlayer1: number[] = [0, 0, 0];
+    scorePlayer2: number[] = [0, 0, 0];
+
+
+
+    static getScore() {
+
+        return this;
+    }
 
     /**
      * Convert the number of exchanges won to the tennis score
@@ -21,16 +31,4 @@ export class ScoreDisplay {
         }
     }
 
-    static displayScoreToLog(): void{
-        TennisScore.getScore();
-        console.log("Player1 - 0 | 0 - Player2");
-    }
-    
-}
-
-export class TennisScore {
-    static getScore():void {
-        
-    }
-    
 }
