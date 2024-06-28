@@ -3,11 +3,11 @@ export class TennisScore {
   private _wonPointsPlayer2: number = 0;
 
   public get wonPointsPlayer1(): number {
-    return this._wonPointsPlayer1;
+    return this.convertPointsToScore(this._wonPointsPlayer1);
   }
 
   public get wonPointsPlayer2(): number {
-    return this._wonPointsPlayer2;
+    return this.convertPointsToScore(this._wonPointsPlayer2);
   }
 
   /**
@@ -16,7 +16,7 @@ export class TennisScore {
    * @returns : number - Score in tennis
    * @throws : Error - If the number of points is not in [0,1,2,3]
    */
-  static convertPointsToScore(nb: number): number {
+  private convertPointsToScore(nb: number): number {
     switch (nb) {
       case 0:
         return 0;
