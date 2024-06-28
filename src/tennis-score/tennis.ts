@@ -26,3 +26,10 @@ export class ScoreDisplay {
     }
     
 }
+
+export class TennisScore {
+    static getScore(getScore: any) {
+        throw new Error("Method not implemented.");
+    }
+    
+}

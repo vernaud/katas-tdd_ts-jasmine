@@ -1,4 +1,5 @@
 import { ScoreDisplay } from "../../src/tennis-score/tennis";
+import {TennisScore} from "../../src/tennis-score/tennis";
 
 describe('displayScoreToLog', () => {
 
@@ -9,6 +10,12 @@ describe('displayScoreToLog', () => {
         ScoreDisplay.displayScoreToLog();
         expect(console.log).toHaveBeenCalledWith(expected);    
     
+    });
+
+    it('should call getScore', () => {
+        spyOn(TennisScore, 'getScore');
+        ScoreDisplay.displayScoreToLog();
+        expect(TennisScore.getScore).toHaveBeenCalled();
     });
 
 });
