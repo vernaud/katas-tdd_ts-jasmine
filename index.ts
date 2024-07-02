@@ -7,9 +7,9 @@
 
 
 /* ------ TENNIS SCORE -------*/
-import { TennisScore } from "./src/tennis-score/TennisScore";
+import { TrackPoints } from "./src/tennis-score/track-score";
 
-let tennisScore = new TennisScore();
+let tennisScore = new TrackPoints();
 console.log(`Début du match:`);
 console.log(`Player1 - ${tennisScore.getWonPointsPlayer(1)} | ${tennisScore.getWonPointsPlayer(2)} - Player2`);
 
