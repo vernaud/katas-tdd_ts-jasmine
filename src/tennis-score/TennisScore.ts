@@ -2,12 +2,15 @@ export class TennisScore {
   private _wonPointsPlayer1: number = 0;
   private _wonPointsPlayer2: number = 0;
 
-  public get wonPointsPlayer1(): number {
-    return this.convertPointsToScore(this._wonPointsPlayer1);
-  }
-
-  public get wonPointsPlayer2(): number {
-    return this.convertPointsToScore(this._wonPointsPlayer2);
+  public getWonPointsPlayer(idPlayer: number): number {
+    switch (idPlayer) {
+      case 1:
+        return this.convertPointsToScore(this._wonPointsPlayer1);
+      case 2:
+        return this.convertPointsToScore(this._wonPointsPlayer2);
+      default:
+        throw new Error("Invalid player");
+    }
   }
 
   /**

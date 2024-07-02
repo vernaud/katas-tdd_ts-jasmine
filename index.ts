@@ -11,8 +11,8 @@ import { TennisScore } from "./src/tennis-score/TennisScore";
 
 let tennisScore = new TennisScore();
 console.log(`Début du match:`);
-console.log(`Player1 - ${tennisScore.wonPointsPlayer1} | ${tennisScore.wonPointsPlayer2} - Player2`);
+console.log(`Player1 - ${tennisScore.getWonPointsPlayer(1)} | ${tennisScore.getWonPointsPlayer(2)} - Player2`);
 
 console.log(`Player2 win a point`);
 tennisScore.incrementPlayerPoints(2);
-console.log(`Player1 - ${tennisScore.wonPointsPlayer1} | ${tennisScore.wonPointsPlayer2} - Player2`);
+console.log(`Player1 - ${tennisScore.getWonPointsPlayer(1)} | ${tennisScore.getWonPointsPlayer(2)} - Player2`);
