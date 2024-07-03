@@ -1,4 +1,4 @@
-export abstract class TennisRules {
+export class TennisRules {
     
     /**
    * Convert the number of exchanges won to the tennis score
@@ -6,7 +6,7 @@ export abstract class TennisRules {
    * @returns : number - Score in tennis
    * @throws : Error - If the number of points is not in [0,1,2,3]
    */
-  public convertPointsToScore(nb: number): number {
+  public static convertPointsToScore(nb: number): number {
     switch (nb) {
       case 0:
         return 0;

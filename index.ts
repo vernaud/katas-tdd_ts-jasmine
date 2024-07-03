@@ -7,7 +7,7 @@
 
 
 /* ------ TENNIS SCORE -------*/
-import { TrackPoints } from "./src/tennis-score/track-score";
+import { TrackPoints } from "./src/tennis-score/track-points";
 
 let tennisScore = new TrackPoints();
 console.log(`Début du match:`);

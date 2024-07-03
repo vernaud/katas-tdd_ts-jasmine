@@ -4,8 +4,6 @@ export class TrackPoints {
   private _wonPointsPlayer1: number = 0;
   private _wonPointsPlayer2: number = 0;
 
-  private tennisRules: TennisRules;
-
   /**
    * Get the number of points won by a player
    * @param idPlayer : number - Id of the player (1 or 2)
@@ -15,9 +13,9 @@ export class TrackPoints {
   public getWonPointsPlayer(idPlayer: number): number {
     switch (idPlayer) {
       case 1:
-        return this.tennisRules.convertPointsToScore(this._wonPointsPlayer1);
+        return TennisRules.convertPointsToScore(this._wonPointsPlayer1);
       case 2:
-        return this.tennisRules.convertPointsToScore(this._wonPointsPlayer2);
+        return TennisRules.convertPointsToScore(this._wonPointsPlayer2);
       default:
         throw new Error("Invalid player");
     }
