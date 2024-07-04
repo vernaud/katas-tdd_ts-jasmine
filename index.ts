@@ -11,8 +11,20 @@ import { TrackPoints } from "./src/tennis-score/track-points";
 
 let tennisScore = new TrackPoints();
 console.log(`Début du match:`);
-console.log(`Player1 - ${tennisScore.getWonPointsPlayer(1)} | ${tennisScore.getWonPointsPlayer(2)} - Player2`);
+console.table(tennisScore);
 
 console.log(`Player2 win a point`);
+tennisScore.incrementPlayerPoints(2);
+console.log(`Player1 - ${tennisScore.getWonPointsPlayer(1)} | ${tennisScore.getWonPointsPlayer(2)} - Player2`);
+
+tennisScore.incrementPlayerPoints(1);
+console.log(`Player1 - ${tennisScore.getWonPointsPlayer(1)} | ${tennisScore.getWonPointsPlayer(2)} - Player2`);
+
+tennisScore.incrementPlayerPoints(2);
+console.log(`Player1 - ${tennisScore.getWonPointsPlayer(1)} | ${tennisScore.getWonPointsPlayer(2)} - Player2`);
+
+tennisScore.incrementPlayerPoints(2);
+console.log(`Player1 - ${tennisScore.getWonPointsPlayer(1)} | ${tennisScore.getWonPointsPlayer(2)} - Player2`);
+
 tennisScore.incrementPlayerPoints(2);
 console.log(`Player1 - ${tennisScore.getWonPointsPlayer(1)} | ${tennisScore.getWonPointsPlayer(2)} - Player2`);
