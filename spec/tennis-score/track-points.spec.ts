@@ -31,8 +31,12 @@ describe('incrementPlayerPoints', () => {
     });
 
     it('should call isEndGame()', () => {
+        const PLAYER1 = 1;
+        const PLAYER2 = 2;
         spyOn(TennisRules, 'isEndGame');
-        expect(TennisRules.isEndGame).toHaveBeenCalled();
+        trackPoints.incrementPlayerPoints(PLAYER1);
+        trackPoints.incrementPlayerPoints(PLAYER2);
+        expect(TennisRules.isEndGame).toHaveBeenCalledTimes(2);
     });
 
 });
