@@ -39,4 +39,17 @@ describe('incrementPlayerPoints', () => {
         expect(TennisRules.isEndGame).toHaveBeenCalledTimes(2);
     });
 
+    it('should call resetPoints when isEndGame is true', () => {
+        const ANY_PLAYER = 1;
+        spyOn(TennisRules, 'isEndGame').and.returnValues(false, true);
+        spyOn(trackPoints, 'resetPoints');
+
+        trackPoints.incrementPlayerPoints(ANY_PLAYER);
+        expect(trackPoints.resetPoints).not.toHaveBeenCalled();
+
+        trackPoints.incrementPlayerPoints(ANY_PLAYER);
+        expect(trackPoints.resetPoints).toHaveBeenCalled();
+        
+    });
+
 });

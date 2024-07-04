@@ -45,4 +45,12 @@ export class TrackPoints {
         throw new Error("Invalid player");
     }
   }
+
+  /**
+   * Reset points of two players
+   */
+  resetPoints(): void {
+    this._wonPointsPlayer1 = 0;
+    this._wonPointsPlayer2 = 0;
+  }
 }
