@@ -1,4 +1,9 @@
 export class TennisRules {
+
+  /**
+   * Game is win with 4 points.
+   */
+  private static GAME_WIN = 4;
     
     /**
    * Convert the number of exchanges won to the tennis score
@@ -21,8 +26,13 @@ export class TennisRules {
     }
   }
 
+  /**
+   * Controll if the game is over
+   * @param nbPoints 
+   * @returns 
+   */
   public static isEndGame(nbPoints: number): boolean {
-    return nbPoints + 1 == 4;
+    return nbPoints == TennisRules.GAME_WIN;
   }
 
 }

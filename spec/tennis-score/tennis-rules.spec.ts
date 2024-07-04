@@ -40,8 +40,8 @@ describe('convertPointsToScore', () => {
 
 describe('isEndGame', () => {
 
-    it('should return true only if next point is 4', () => {
-        const SHOULD_END = 3;
+    it('should return true only if point is 4', () => {
+        const SHOULD_END = 4;
         const SHOULD_CONTINUE = 2;
 
         const END_GAME = TennisRules.isEndGame(SHOULD_END);

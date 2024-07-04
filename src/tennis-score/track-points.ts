@@ -28,14 +28,18 @@ export class TrackPoints {
   incrementPlayerPoints(player: number): void {
     switch (player) {
       case 1:
-        if (TennisRules.isEndGame(this._wonPointsPlayer1)) {
-        }
         this._wonPointsPlayer1++;
+        if (TennisRules.isEndGame(this._wonPointsPlayer1)) {
+          // should increment winGame
+          // reset points of two players for next game
+        }
         break;
       case 2:
-        if (TennisRules.isEndGame(this._wonPointsPlayer2)) {
-        }
         this._wonPointsPlayer2++;
+        if (TennisRules.isEndGame(this._wonPointsPlayer2)) {
+          // should increment winGame
+          // reset points of two players for next game
+        }
         break;
       default:
         throw new Error("Invalid player");
