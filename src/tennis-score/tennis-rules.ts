@@ -22,8 +22,7 @@ export class TennisRules {
   }
 
   public static isEndGame(nbPoints: number): boolean {
-    
-    return false;
+    return nbPoints + 1 == 4;
   }
 
 }
