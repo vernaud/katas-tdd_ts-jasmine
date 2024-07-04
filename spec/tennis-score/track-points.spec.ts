@@ -1,3 +1,4 @@
+import { TennisRules } from "../../src/tennis-score/tennis-rules";
 import { TrackPoints } from "../../src/tennis-score/track-points";
 
 describe('incrementPlayerPoints', () => {
@@ -23,9 +24,15 @@ describe('incrementPlayerPoints', () => {
     });
 
     it('should throw an error when player is not in [1,2]', () => {
+        const INVALID_PLAYER = 3;
         expect(() => {
-            trackPoints.incrementPlayerPoints(3);
+            trackPoints.incrementPlayerPoints(INVALID_PLAYER);
         }).toThrowError("Invalid player");
+    });
+
+    it('should call isEndGame()', () => {
+        spyOn(TennisRules, 'isEndGame');
+        expect(TennisRules.isEndGame).toHaveBeenCalled();
     });
 
 });

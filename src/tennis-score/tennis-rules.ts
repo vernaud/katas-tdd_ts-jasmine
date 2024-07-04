@@ -21,4 +21,8 @@ export class TennisRules {
     }
   }
 
+  public static isEndGame(): boolean {
+    return false;
+  }
+
 }

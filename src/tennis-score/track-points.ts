@@ -28,14 +28,10 @@ export class TrackPoints {
   incrementPlayerPoints(player: number): void {
     switch (player) {
       case 1:
-        if (this._wonPointsPlayer1 < 3) {
-            this._wonPointsPlayer1++;
-        }
+          this._wonPointsPlayer1++;
         break;
       case 2:
-        if (this._wonPointsPlayer2 < 3) {
-            this._wonPointsPlayer2++;
-        }
+          this._wonPointsPlayer2++;
         break;
       default:
         throw new Error("Invalid player");
