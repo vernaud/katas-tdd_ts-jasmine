@@ -31,14 +31,14 @@ export class TrackPoints {
         this._wonPointsPlayer1++;
         if (TennisRules.isEndGame(this._wonPointsPlayer1)) {
           // should increment winGame
-          // reset points of two players for next game
+          this.resetPoints();
         }
         break;
       case 2:
         this._wonPointsPlayer2++;
         if (TennisRules.isEndGame(this._wonPointsPlayer2)) {
           // should increment winGame
-          // reset points of two players for next game
+          this.resetPoints();
         }
         break;
       default:
