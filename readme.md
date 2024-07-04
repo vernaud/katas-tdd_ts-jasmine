@@ -16,7 +16,6 @@ Write program which calculate and display tennis scoring game.
         tie break : 7pts won for win set
 - *MATCH : Won 3 or 5 sets. (not implemented).*
 ### TODO
-- Fix test
 - Display GAMES
 - Display SETS
 ___
