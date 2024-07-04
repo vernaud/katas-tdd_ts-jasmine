@@ -28,12 +28,12 @@ export class TrackPoints {
   incrementPlayerPoints(player: number): void {
     switch (player) {
       case 1:
-        if (TennisRules.isEndGame()) {
+        if (TennisRules.isEndGame(this._wonPointsPlayer1)) {
         }
         this._wonPointsPlayer1++;
         break;
       case 2:
-        if (TennisRules.isEndGame()) {
+        if (TennisRules.isEndGame(this._wonPointsPlayer2)) {
         }
         this._wonPointsPlayer2++;
         break;

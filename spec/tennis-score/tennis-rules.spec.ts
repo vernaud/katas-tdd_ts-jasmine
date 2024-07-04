@@ -37,3 +37,13 @@ describe('convertPointsToScore', () => {
 
     });
 });
+
+describe('isEndGame', () => {
+
+    it('should return true only if next point is 4', () => {
+        const PLAYER_POINTS = 3;
+        const RESULT = TennisRules.isEndGame(PLAYER_POINTS);
+        expect(RESULT).toBe(true);
+    });
+
+});
